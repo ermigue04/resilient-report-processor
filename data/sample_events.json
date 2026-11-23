@@ -1,0 +1,54 @@
+[
+  {
+    "case": "evento_valido_normal",
+    "external_event_id": "evt_20261122_0001",
+    "source": "portal_ciudadano",
+    "timestamp": "2026-11-22T18:30:00Z",
+    "payload": {
+      "titulo": "Fuga de agua en vía pública",
+      "descripcion": "Se reporta ruptura de tubería principal en Av. Central esquina Calle 5, con acumulación de agua en la calzada.",
+      "ubicacion": "Av. Central y Calle 5",
+      "reportante": {
+        "nombre": "Carlos Méndez",
+        "contacto": "carlos.mendez@example.com"
+      },
+      "severidad_sugerida": "alta"
+    }
+  },
+  {
+    "case": "evento_duplicado",
+    "external_event_id": "evt_20261122_0001",
+    "source": "portal_ciudadano",
+    "timestamp": "2026-11-22T18:30:05Z",
+    "payload": {
+      "titulo": "Fuga de agua en vía pública",
+      "descripcion": "Se reporta ruptura de tubería principal en Av. Central esquina Calle 5, con acumulación de agua en la calzada.",
+      "ubicacion": "Av. Central y Calle 5",
+      "reportante": {
+        "nombre": "Carlos Méndez",
+        "contacto": "carlos.mendez@example.com"
+      },
+      "severidad_sugerida": "alta"
+    }
+  },
+  {
+    "case": "evento_incompleto_o_corrupto",
+    "external_event_id": "evt_20261122_0002",
+    "source": "webhook_legacy",
+    "timestamp": "invalid-date-format",
+    "payload": "{ \"titulo\": \"Corte de luz\", \"descripcion\": \"Sin servicio en sector norte\", \"ubicacion\": "
+  },
+  {
+    "case": "evento_ambiguo_edge_case",
+    "external_event_id": "evt_20261122_0003",
+    "source": "app_movil",
+    "timestamp": "2026-11-22T19:05:12Z",
+    "payload": {
+      "titulo": "Problema urgente",
+      "descripcion": "Hace ruido raro desde ayer cerca del parque pero no estoy seguro si es un transformador o una alcantarilla, además huele extraño a veces.",
+      "ubicacion": "",
+      "reportante": null,
+      "severidad_sugerida": "desconocida"
+    }
+  }
+]
